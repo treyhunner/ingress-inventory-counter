@@ -1,0 +1,9 @@
+root = true
+
+[*.{css,html,js}]
+indent_style = space
+indent_size = 2
+
+[*.md]
+indent_style = space
+indent_size = 4
