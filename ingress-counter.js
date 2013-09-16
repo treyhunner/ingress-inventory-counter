@@ -26,9 +26,7 @@
 
   function setFieldsFromStorage() {
     fields.forEach(function (field) {
-      if (localStorage[field.name] !== null) {
-        field.value = localStorage[field.name];
-      }
+      field.value = localStorage[field.name] || "0";
     });
   }
 
