@@ -1,0 +1,13 @@
+input[type=number] {
+  text-align: center;
+  width: 5em;
+}
+form {
+  width: 80em;
+}
+table {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 1em;
+}
