@@ -2,28 +2,52 @@
 
   "use strict";
 
-  var fields, i;
+  var fields, hasLocalStorage, i;
 
   fields = [].slice.call(document.getElementsByTagName('input'), 0);
 
-  function getTotal() {
+  hasLocalStorage = (function (){
+    try {
+      localStorage.setItem('localStorage-test', true);
+      localStorage.removeItem('localStorage-test');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }());
+
+  function updateTotal() {
     var sum = 0;
     fields.forEach(function (field) {
       sum += parseInt(field.value, 10) || 0;
     });
-    return sum;
+    document.getElementById('total').textContent = sum;
   }
 
-  function setTotal(total) {
-    document.getElementById('total').textContent = total;
+  function setFieldsFromStorage() {
+    fields.forEach(function (field) {
+      if (localStorage[field.name] !== null) {
+        field.value = localStorage[field.name];
+      }
+    });
   }
 
-  function calculateTotal() {
-    setTotal(getTotal());
+  function storeFields() {
+    fields.forEach(function (field) {
+      localStorage[field.name] = field.value;
+    });
   }
 
   fields.forEach(function (field) {
-    field.oninput = calculateTotal;
+    field.oninput = function () {
+      updateTotal();
+      if (hasLocalStorage) {
+        storeFields();
+      }
+    };
   });
+
+  setFieldsFromStorage();
+  updateTotal();
 
 }());
