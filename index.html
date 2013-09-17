@@ -9,24 +9,52 @@
   <form>
 
     <table>
+      <caption>Media</caption>
       <thead>
         <tr>
-          <th>Media</th>
+          <th>L1</th>
+          <th>L2</th>
+          <th>L3</th>
+          <th>L4</th>
+          <th>L5</th>
+          <th>L6</th>
+          <th>L7</th>
+          <th>L8</th>
         </tr>
       </thead>
       <tbody>
       <tr>
-        <td><input type="number" name="media"></td>
+        <td><input type="number" name="media_01"></td>
+        <td><input type="number" name="media_02"></td>
+        <td><input type="number" name="media_03"></td>
+        <td><input type="number" name="media_04"></td>
+        <td><input type="number" name="media_05"></td>
+        <td><input type="number" name="media_06"></td>
+        <td><input type="number" name="media_07"></td>
+        <td><input type="number" name="media_08"></td>
       </tr>
       </tbody>
     </table>
 
     <table>
+      <caption>Mods</caption>
+      <colgroup span="3">
+        <col class="common">
+        <col class="rare">
+        <col class="very-rare">
+      </colgroup>
+      <colgroup>
+      </colgroup>
+      <colgroup span="3">
+      </colgroup>
+      <colgroup span="3">
+      </colgroup>
+      <colgroup>
+      </colgroup>
+      <colgroup>
+      </colgroup>
       <thead>
-        <tr>
-          <th colspan="8">Mods</th>
-        </tr>
-        <tr>
+        <tr class="groups">
           <th colspan="3">Portal Shield</th>
           <th>Link Amp</th>
           <th colspan="3">Heat Sink</th>
@@ -58,25 +86,21 @@
         <td><input type="number" name="shield-c"></td>
         <td><input type="number" name="shield-r"></td>
         <td><input type="number" name="shield-vr"></td>
-        <td><input type="number" name="link-amp"></td>
+        <td><input type="number" name="link-amp-r"></td>
         <td><input type="number" name="heat-sink-c"></td>
         <td><input type="number" name="heat-sink-r"></td>
         <td><input type="number" name="heat-sink-vr"></td>
         <td><input type="number" name="multi-hack-c"></td>
         <td><input type="number" name="multi-hack-r"></td>
         <td><input type="number" name="multi-hack-vr"></td>
-        <td><input type="number" name="force-amp"></td>
-        <td><input type="number" name="turret"></td>
+        <td><input type="number" name="force-amp-r"></td>
+        <td><input type="number" name="turret-r"></td>
       </tr>
       </tbody>
     </table>
 
     <table>
-      <thead>
-        <tr>
-          <th>Portal Keys</th>
-        </tr>
-      </thead>
+      <caption>Portal Keys</caption>
       <tbody>
       <tr>
         <td><input type="number" name="keys"></td>
@@ -85,10 +109,8 @@
     </table>
 
     <table>
+      <caption>Power Cubes</caption>
       <thead>
-        <tr>
-          <th colspan="8">Power Cubes</th>
-        </tr>
         <tr>
           <th>L1</th>
           <th>L2</th>
@@ -115,10 +137,8 @@
     </table>
 
     <table>
+      <caption>Resonators</caption>
       <thead>
-        <tr>
-          <th colspan="10">Resonators</th>
-        </tr>
         <tr>
           <th>L1</th>
           <th>L2</th>
@@ -145,10 +165,8 @@
     </table>
 
     <table>
+      <caption>Weapons</caption>
       <thead>
-        <tr>
-          <th colspan="10">Weapons</th>
-        </tr>
         <tr>
           <th>L1</th>
           <th>L2</th>

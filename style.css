@@ -1,13 +1,92 @@
+html {
+  font-family: Arial;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+
 input[type=number] {
   text-align: center;
-  width: 5em;
+  width: 4em;
+  padding: 0.25em;
+  border-width: 0.25em;
 }
-form {
-  width: 80em;
-}
+
+
 table {
-  width: 100%;
   text-align: center;
-  border: 1px solid #ccc;
   margin: 1em;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-spacing: 0.5em 1em;
+}
+
+caption, th, td {
+  white-space: nowrap;
+}
+
+th {
+  font-weight: normal;
+}
+.groups th {
+  font-weight: bold;
+}
+
+td:not([colspan]), th:not([colspan]) {
+  width: 7.66666666em;
+}
+
+caption {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+colgroup {
+  border: 1px solid #ccc;
+}
+
+input[name$=-c] {
+  border-color: #8cffbd;
+}
+input[name$=-r] {
+  border-color: #ad8eff;
+}
+input[name$=-vr] {
+  border-color: #ff8eff;
+}
+
+input[name$=_01] {
+  border-color: #ffcf57;
+}
+input[name$=_02] {
+  border-color: #ffa52e;
+}
+input[name$=_03] {
+  border-color: #ff7110;
+}
+input[name$=_04] {
+  border-color: #e60000;
+}
+input[name$=_05] {
+  border-color: #fe2692;
+}
+input[name$=_06] {
+  border-color: #ef24ce;
+}
+input[name$=_07] {
+  border-color: #c321e2;
+}
+input[name$=_08] {
+  border-color: #9624f8;
+}
+input[name=ada] {
+  border-color: #63ffff;
+}
+input[name=jarvis] {
+  border-color: #3effab;
+}
+input[name=keys] {
+  border-color: #fff0ad;
 }
