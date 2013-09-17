@@ -7,12 +7,27 @@ body {
   color: #fff;
 }
 
+::selection {
+  background-color: #3effab;
+}
 
-input[type=number] {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input {
   text-align: center;
   width: 4em;
   padding: 0.25em;
   border-width: 0.25em;
+  border-style: double;
+  background-color: #000;
+  color: #fff;
+}
+input:focus {
+  border-style: solid;
+  background-color: #222;
 }
 
 
