@@ -43,6 +43,9 @@
         storeFields();
       }
     };
+    field.onclick = function () {
+      field.select();
+    };
   });
 
   setFieldsFromStorage();
