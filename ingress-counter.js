@@ -26,7 +26,7 @@
 
   function setFieldsFromStorage() {
     fields.forEach(function (field) {
-      field.value = localStorage[field.name] || "0";
+      field.value = parseInt(localStorage[field.name], 10) || "";
     });
   }
 

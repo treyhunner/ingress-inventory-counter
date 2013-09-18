@@ -6,10 +6,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form>
 
+  <header>
+    <h1>Ingress Item Counter</h1>
+  </header>
+
+  <section>
+    <h2>Media</h2>
     <table>
-      <caption>Media</caption>
       <thead>
         <tr>
           <th>L1</th>
@@ -35,81 +39,72 @@
       </tr>
       </tbody>
     </table>
+  </section>
 
-    <table>
-      <caption>Mods</caption>
-      <colgroup span="3">
-        <col class="common">
-        <col class="rare">
-        <col class="very-rare">
-      </colgroup>
-      <colgroup>
-      </colgroup>
-      <colgroup span="3">
-      </colgroup>
-      <colgroup span="3">
-      </colgroup>
-      <colgroup>
-      </colgroup>
-      <colgroup>
-      </colgroup>
+  <section>
+    <h2>Mods</h2>
+    <table class="mods">
       <thead>
-        <tr class="groups">
-          <th colspan="3">Portal Shield</th>
-          <th>Link Amp</th>
-          <th colspan="3">Heat Sink</th>
-          <th colspan="3">Multi-hack</th>
-          <th>Force Amp</th>
-          <th>Turret</th>
-        </tr>
         <tr>
+          <th></th>
           <th>Common</th>
           <th>Rare</th>
           <th>Very Rare</th>
-
-          <th>Rare</th>
-
-          <th>Common</th>
-          <th>Rare</th>
-          <th>Very Rare</th>
-
-          <th>Common</th>
-          <th>Rare</th>
-          <th>Very Rare</th>
-
-          <th>Rare</th>
-          <th>Rare</th>
         </tr>
       </thead>
       <tbody>
       <tr>
+        <th>Portal Shield</th>
         <td><input type="number" name="shield-c"></td>
         <td><input type="number" name="shield-r"></td>
         <td><input type="number" name="shield-vr"></td>
+      </tr>
+      <tr>
+        <th>Link Amp</th>
+        <td></td>
         <td><input type="number" name="link-amp-r"></td>
+      </tr>
+      <tr>
+        <th>Heat Sink</th>
         <td><input type="number" name="heat-sink-c"></td>
         <td><input type="number" name="heat-sink-r"></td>
         <td><input type="number" name="heat-sink-vr"></td>
+      </tr>
+      <tr>
+        <th>Multi-hack</th>
         <td><input type="number" name="multi-hack-c"></td>
         <td><input type="number" name="multi-hack-r"></td>
         <td><input type="number" name="multi-hack-vr"></td>
+      </tr>
+      <tr>
+        <th>Force Amp</th>
+        <td></td>
         <td><input type="number" name="force-amp-r"></td>
+      </tr>
+      <tr>
+        <th>Turret</th>
+        <td></td>
         <td><input type="number" name="turret-r"></td>
       </tr>
       </tbody>
     </table>
+  </section>
 
+  <section>
+    <h2>Portal Keys</h2>
     <table>
-      <caption>Portal Keys</caption>
       <tbody>
       <tr>
         <td><input type="number" name="keys"></td>
       </tr>
       </tbody>
     </table>
+  </section>
 
+
+  <section>
+    <h2>Power Cubes</h2>
     <table>
-      <caption>Power Cubes</caption>
       <thead>
         <tr>
           <th>L1</th>
@@ -135,9 +130,11 @@
       </tr>
       </tbody>
     </table>
+  </section>
 
+  <section>
+    <h2>Resonators</h2>
     <table>
-      <caption>Resonators</caption>
       <thead>
         <tr>
           <th>L1</th>
@@ -163,9 +160,12 @@
       </tr>
       </tbody>
     </table>
+  </section>
 
+  <section>
+    <h2>Weapons</h2>
+    <h3>XMP Bursters</h3>
     <table>
-      <caption>Weapons</caption>
       <thead>
         <tr>
           <th>L1</th>
@@ -176,8 +176,6 @@
           <th>L6</th>
           <th>L7</th>
           <th>L8</th>
-          <th>ADA</th>
-          <th>Jarvis</th>
         </tr>
       </thead>
       <tbody>
@@ -190,18 +188,30 @@
         <td><input type="number" name="burster_06"></td>
         <td><input type="number" name="burster_07"></td>
         <td><input type="number" name="burster_08"></td>
+      </tr>
+      </tbody>
+    </table>
+    <h3>Other</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ADA Refactor</th>
+          <th>JARVIS Virus</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
         <td><input type="number" name="ada"></td>
         <td><input type="number" name="jarvis"></td>
       </tr>
       </tbody>
     </table>
+  </section>
 
-    <div>
-      <h4>Total</h4>
-      <span id="total"></span>
-    </div>
-
-  </form>
+  <div class="total-box">
+    <h2>Total</h2>
+    <span id="total"></span>
+  </div>
 
   <script src="ingress-counter.js"></script>
 </body>

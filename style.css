@@ -5,7 +5,35 @@ html {
 body {
   background-color: #000;
   color: #fff;
+  text-align: center;
+  padding: 1em;
 }
+
+h1, h2, h3, h4 { margin-top: 0; }
+
+section {
+  background-color: #333;
+  border-radius:5px;
+  padding: 1em;
+  width: 60em;
+  margin: 2em auto;
+}
+
+.mods th:first-child {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.total-box {
+  position: fixed;
+  right: 3em;
+  bottom: 2em;
+  background-color: #333;
+  padding: 1em 2em;
+  border-radius:5px;
+}
+
+#total { font-size: 2.5em; }
 
 ::selection {
   background-color: #3effab;
@@ -33,14 +61,12 @@ input:focus {
 
 table {
   text-align: center;
-  margin: 1em;
-  border-collapse: collapse;
-  border: 1px solid #ccc;
-  border-spacing: 0.5em 1em;
+  margin: 0 auto;
 }
 
 caption, th, td {
   white-space: nowrap;
+  padding: 0.5em 1em;
 }
 
 th {
@@ -48,10 +74,6 @@ th {
 }
 .groups th {
   font-weight: bold;
-}
-
-td:not([colspan]), th:not([colspan]) {
-  width: 7.66666666em;
 }
 
 caption {
