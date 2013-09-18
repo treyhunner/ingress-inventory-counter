@@ -5,18 +5,23 @@ html {
 body {
   background-color: #000;
   color: #fff;
-  text-align: center;
+  text-align: left;
   padding: 1em;
+  font-size: 13px;
+}
+
+::selection {
+  background-color: #3effab;
 }
 
 h1, h2, h3, h4 { margin-top: 0; }
+
 
 section {
   background-color: #333;
   border-radius:5px;
   padding: 1em;
-  width: 60em;
-  margin: 2em auto;
+  margin: 2em 0;
 }
 
 .mods th:first-child {
@@ -24,10 +29,8 @@ section {
   font-size: 1.2em;
 }
 
+
 .total-box {
-  position: fixed;
-  right: 3em;
-  bottom: 2em;
   background-color: #333;
   padding: 1em 2em;
   border-radius:5px;
@@ -35,9 +38,6 @@ section {
 
 #total { font-size: 2.5em; }
 
-::selection {
-  background-color: #3effab;
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -61,27 +61,13 @@ input:focus {
 
 table {
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
 }
 
-caption, th, td {
+th, td {
   white-space: nowrap;
   padding: 0.5em 1em;
-}
-
-th {
   font-weight: normal;
-}
-.groups th {
-  font-weight: bold;
-}
-
-caption {
-  font-size: 1.5em;
-  line-height: 2em;
-}
-colgroup {
-  border: 1px solid #ccc;
 }
 
 input[name$=-c] {
@@ -126,4 +112,34 @@ input[name=jarvis] {
 }
 input[name=keys] {
   border-color: #fff0ad;
+}
+
+@media (min-width: 1070px) {
+  .total-box {
+    position: fixed;
+    right: 3em;
+    bottom: 2em;
+  }
+  section {
+    width: 60em;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    text-align: center;
+    font-size: 16px;
+  }
+  section {
+    margin: 2em auto;
+  }
+  table {
+    margin: 0 auto;
+  }
 }
