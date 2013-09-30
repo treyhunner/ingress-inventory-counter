@@ -2,9 +2,10 @@
 
   "use strict";
 
-  var fields, hasLocalStorage, i;
+  var fields, hasLocalStorage, shareLink, i;
 
   fields = [].slice.call(document.getElementsByTagName('input'), 0);
+  shareLink = document.getElementById('shareLink');
 
   hasLocalStorage = (function (){
     try {
@@ -24,7 +25,19 @@
     document.getElementById('total').textContent = sum;
   }
 
-  function setFieldsFromStorage() {
+  function setStorageFromURL() {
+    var storage, key;
+    if (window.location.hash) {
+      storage = JSON.parse(atob(window.location.hash.slice(1)));
+    }
+    for (key in storage) {
+      if (storage.hasOwnProperty(key)) {
+        localStorage[key] = storage[key];
+      }
+    }
+  }
+
+  function setInitialFields() {
     fields.forEach(function (field) {
       field.value = parseInt(localStorage[field.name], 10) || "";
     });
@@ -36,19 +49,26 @@
     });
   }
 
+  function updateShareLink() {
+    shareLink.href = '#' + btoa(JSON.stringify(localStorage));
+  }
+
   fields.forEach(function (field) {
     field.oninput = function () {
       updateTotal();
       if (hasLocalStorage) {
         storeFields();
       }
+      updateShareLink();
     };
     field.onclick = function () {
       field.select();
     };
   });
 
-  setFieldsFromStorage();
+  setStorageFromURL();
+  setInitialFields();
   updateTotal();
+  updateShareLink();
 
 }());
